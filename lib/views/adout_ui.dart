@@ -11,8 +11,59 @@ class _AboutUiState extends State<AboutUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('about'),
+      body: Stack(
+        children: [
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Body Health Calculater',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey[800],
+                  ),
+                ),
+                SizedBox(height: 20),
+                Image.asset(
+                  'assets/images/calculater.png',
+                  width: 120,
+                  height: 120,
+                  fit: BoxFit.cover,
+                ),
+                SizedBox(height: 20),
+                Text(
+                  'คำนวณหาค่าดัชนีมวลกาย (BMI)',
+                ),
+                SizedBox(height: 20),
+                Text(
+                  'คำนวณหาปริมาณแคลเลอรี่ที่ร่างกายต้องการในแต่ละวัน (BMR)',
+                ),
+              ],
+            ),
+          ),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Image.network(
+                  'https://upload.wikimedia.org/wikipedia/commons/4/47/Logosau-02.png',
+                  width: 60.0,
+                ),
+                Text(
+                  'Developed by Sakunna za55+',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey[800],
+                  ),
+                ),
+                SizedBox(height: 40),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

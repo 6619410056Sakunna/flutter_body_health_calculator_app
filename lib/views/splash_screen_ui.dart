@@ -11,9 +11,12 @@ class SplashScreenUi extends StatefulWidget {
 class _SplashScreenUiState extends State<SplashScreenUi> {
   @override
   void initState() {
+    //จะทำงานเมื่อหน้าจอเปิด
     // TODO: implement initState
     Future.delayed(Duration(seconds: 3), () {
+      //ทำให้จอเปิดหน่วง เวลา
       Navigator.pushReplacement(
+        //ย้อนกลับไม่ได้
         context,
         MaterialPageRoute(
           builder: (context) => HomeUi(),
